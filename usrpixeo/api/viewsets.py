@@ -6,4 +6,4 @@ from usrpixeo import models
 class ImagesViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     serializer_class = serializers.ImagesSerializer
-    queryset = models.Images.objects.all()
+    queryset = models.Images.objects.all()  

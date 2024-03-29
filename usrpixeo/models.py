@@ -4,7 +4,20 @@ from PIL import Image
 import rembg
 
 class Images(models.Model):
-    img_id = models.UUIDField(primary_key=True,default=uuid4,editable=False)
+    """
+    Represents an image object with various attributes and methods.
+
+    Attributes:
+        img_id (UUIDField): The unique identifier for the image.
+        title (CharField): The title of the image.
+        image (ImageField): The image file.
+        description (TextField): The description of the image.
+        optimized (BooleanField): Indicates if the image has been optimized.
+        remove_bg (BooleanField): Indicates if the background has been removed.
+        created_at (DateTimeField): The timestamp when the image was created.
+    """
+
+    img_id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/')
     description = models.TextField()
