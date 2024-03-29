@@ -6,6 +6,8 @@ class Images(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/')
     description = models.TextField()
+    optimized = models.BooleanField(default=True)
+    remove_bg = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
