@@ -1,0 +1,25 @@
+# dirs django
+*.pyc
+__pycache__/
+*.sqlite3
+db.sqlite3
+
+# envs and configs
+.env
+
+# files from ide and editor
+.vscode/
+.idea/
+
+# logs file
+logs/
+*.log
+
+# static files
+staticfiles/
+
+# media files
+media/
+
+# virtual env
+venv/
